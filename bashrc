@@ -128,6 +128,4 @@ fi
 
 export PS1="\u@\h:\[\033[32m\]\W\[\033[33m\]\$(parse_git_branch)\[\033[00m\]$ "
 
-export CSMITH_HOME=/home/sam/src/csmith-2.3.0
-
 
