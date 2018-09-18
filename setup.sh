@@ -12,9 +12,12 @@ sudo apt-get update && sudo apt-get upgrade && \
 sudo apt-get install vim htop tmux byobu build-essential
 
 mkdir -p ~/.vim/colors
+mkdir ~/.vim/syntax
 wget https://raw.githubusercontent.com/altercation/vim-colors-solarized/master/colors/solarized.vim
 mv solarized.vim ~/.vim/colors
 
 cp bashrc ~/.bashrc
 cp vimrc ~/.vimrc
 cp tmux.conf ~/.tmux.conf
+cp llvm.vim ~/.vim/syntax
+cp tablegen.vim ~/.vim/syntax
