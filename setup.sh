@@ -9,7 +9,7 @@
 #wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key|sudo apt-key add -
 
 sudo apt-get update && sudo apt-get upgrade && \
-sudo apt-get install vim htop tmux byobu build-essential cmake nodejs npm
+sudo apt-get install apt-utils vim htop tmux byobu build-essential cmake nodejs npm
 
 git config --global user.email "grubbymitts69@gmail.com"
 git config --global user.name "Samuel Parker-Haynes"
