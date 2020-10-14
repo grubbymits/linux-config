@@ -3,13 +3,10 @@
 # Use lsb-release to determine whether we're on ubuntu or debian
 #sudo apt-get update && sudo apt-get upgrade && sudo apt-get install lsb-release
 
-# Add the LLVM repos
-#sudo echo "deb http://apt.llvm.org/stretch/ llvm-toolchain-stretch-7 main" > /etc/apt/sources.list
-#sudo echo "deb-src http://apt.llvm.org/stretch/ llvm-toolchain-stretch-7 main" > /etc/apt/sources.list
-#wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key|sudo apt-key add -
-
 sudo apt-get update && sudo apt-get upgrade && \
-sudo apt-get install apt-utils vim htop tmux byobu build-essential cmake nodejs npm
+sudo apt-get install apt-utils vim htop tmux byobu build-essential cmake ninja-build snapd
+
+sudo snap install node --channel=14/stable --classic
 
 git config --global user.email "grubbymitts69@gmail.com"
 git config --global user.name "Samuel Parker-Haynes"
