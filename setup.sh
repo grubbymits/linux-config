@@ -4,9 +4,10 @@
 #sudo apt-get update && sudo apt-get upgrade && sudo apt-get install lsb-release
 
 sudo apt-get update && sudo apt-get upgrade && \
-sudo apt-get install apt-utils vim htop tmux byobu build-essential cmake ninja-build snapd
+sudo apt-get install apt-utils vim htop tmux byobu build-essential cmake ninja-build
 
-sudo snap install node --channel=14/stable --classic
+sudo curl -sL https://deb.nodesource.com/setup_14.x | sudo bash -
+sudo apt install -y nodejs
 
 git config --global user.email "grubbymitts69@gmail.com"
 git config --global user.name "Samuel Parker-Haynes"
