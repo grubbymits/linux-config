@@ -19,7 +19,8 @@ sudo apt-get install \
   lldb \
   snapd
 
-sudo snap install node --channel=14/stable --classic
+sudo curl -sL https://deb.nodesource.com/setup_14.x | sudo bash -
+sudo apt install -y nodejs
 
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
