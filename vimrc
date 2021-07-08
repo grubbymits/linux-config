@@ -41,3 +41,5 @@ if $SSH_CONNECTION
 endif
 set background=dark
 colorscheme solarized
+
+let g:airline_them='base16_solarized_dark'

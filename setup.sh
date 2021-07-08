@@ -24,7 +24,7 @@ sudo apt install -y nodejs
 
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
-git config --global user.email "grubbymitts69@gmail.com"
+git config --global user.email "samuel@grubbymits.dev"
 git config --global user.name "Samuel Parker-Haynes"
 
 # Setup vim with solarized colours
@@ -39,6 +39,11 @@ git clone https://github.com/leafgarland/typescript-vim.git ~/.vim/pack/typescri
 # Cranelift IR syntax
 mkdir -p ~/.vim/pack/plugins/start/
 git clone https://github.com/CraneStation/cranelift.vim ~/.vim/pack/plugins/start/cranelift.vim
+
+# Airline
+mkdir -p ~/.vim/pack/dist/start
+git clone https://github.com/vim-airline/vim-airline ~/.vim/pack/dist/start/vim-airline
+git clone https://github.com/vim-airline/vim-airline-themes ~/.vim/pack/dist/start/vim-airline-themes
 
 # LLVM syntax
 cp tablegen.vim ~/.vim/syntax
