@@ -18,6 +18,13 @@ sudo apt-get install \
   lld \
   lldb \
   snapd
+  
+sudo add-apt-repository ppa:regolith-linux/release
+sudo apt install regolith-desktop-standard # or regolith-desktop-mobile for laptops
+sudo apt install i3xrocks-cpu-usage i3xrocks-memory i3xrocks-temp i3xrocks-volume
+sudo apt install regolith-look-solarized-dark
+# regolith-look set solarized-dark
+# regolith-look refresh
 
 sudo curl -sL https://deb.nodesource.com/setup_14.x | sudo bash -
 sudo apt install -y nodejs
