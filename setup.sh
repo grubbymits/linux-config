@@ -17,8 +17,21 @@ sudo apt-get install \
   clang \
   lld \
   lldb \
+  curl \
   snapd
-  
+
+# spotify
+curl -sS https://download.spotify.com/debian/pubkey_0D811D58.gpg | sudo apt-key add - 
+echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
+sudo apt-get update && sudo apt-get install spotify-client
+
+# brave browser
+sudo apt install apt-transport-https
+sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+sudo apt update
+sudo apt install brave-browser
+
 sudo add-apt-repository ppa:regolith-linux/release
 sudo apt install regolith-desktop-standard # or regolith-desktop-mobile for laptops
 sudo apt install i3xrocks-cpu-usage i3xrocks-memory i3xrocks-temp i3xrocks-volume
@@ -26,9 +39,11 @@ sudo apt install regolith-look-solarized-dark
 # regolith-look set solarized-dark
 # regolith-look refresh
 
+# Node
 sudo curl -sL https://deb.nodesource.com/setup_14.x | sudo bash -
 sudo apt install -y nodejs
 
+# Rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 git config --global user.email "samuel@grubbymits.dev"
@@ -61,5 +76,5 @@ cp vimrc ~/.vimrc
 cp tmux.conf ~/.tmux.conf
 
 # Add usual directories in home
-mkdir ~/src
+mkdir -p ~/src/patches
 mkdir ~/scripts
