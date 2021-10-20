@@ -18,6 +18,8 @@ sudo apt-get install \
   lld \
   lldb \
   curl \
+  openssh-server \
+  mosh \
   snapd
 
 # spotify
@@ -45,6 +47,7 @@ sudo apt install -y nodejs
 
 # Rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+rustup target add wasm32-wasi
 
 git config --global user.email "samuel@grubbymits.dev"
 git config --global user.name "Samuel Parker-Haynes"
@@ -78,3 +81,6 @@ cp tmux.conf ~/.tmux.conf
 # Add usual directories in home
 mkdir -p ~/src/patches
 mkdir ~/scripts
+
+git clone https://github.com/llvm/llvm-project.git ~/src/llvm-project
+git clone --recursive https://github.com/sparker-arm/wasmtime.git ~/src/wasmtime
