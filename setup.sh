@@ -29,6 +29,8 @@ sudo apt-get install \
   qemu-system-arm \
   qemu-efi-aarch64 \
   curl \
+  openssh-server \
+  mosh \
   snapd
 
 # spotify
@@ -56,6 +58,7 @@ sudo apt install -y nodejs
 
 # Rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+rustup target add wasm32-wasi
 
 git config --global user.email "samuel@grubbymits.dev"
 git config --global user.name "Samuel Parker-Haynes"
@@ -63,7 +66,7 @@ git config --global user.name "Samuel Parker-Haynes"
 # Setup vim with solarized colours
 mkdir -p ~/.vim/colors
 mkdir ~/.vim/syntax
-wget https://raw.githubusercontent.com/altercation/vim-colors-solarized/master/colors/solarized.vim -o ~/.vim/colors/solarized.vim
+wget https://raw.githubusercontent.com/altercation/vim-colors-solarized/master/colors/solarized.vim -O ~/.vim/colors/solarized.vim
 
 # Typescript syntax
 mkdir -p ~/.vim/pack/typescript/start/
@@ -89,3 +92,6 @@ cp tmux.conf ~/.tmux.conf
 # Add usual directories in home
 mkdir -p ~/src/patches
 mkdir ~/scripts
+
+git clone https://github.com/llvm/llvm-project.git ~/src/llvm-project
+git clone --recursive https://github.com/sparker-arm/wasmtime.git ~/src/wasmtime
