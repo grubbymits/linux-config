@@ -126,6 +126,16 @@ if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
         source /etc/profile.d/vte.sh
 fi
 
+# QEMU settings for wasmtime
+CROSS_ROOT="/usr/aarch64-linux-gnu"
+TRIPLE="aarch64-linux-gnu"
+VERSION=$(gcc --version | head -n1 | cut -d" " -f4 | cut -d. -f1)
+GCC_CROSS="/usr/lib/gcc-cross/$TRIPLE/$VERSION"
+LIBS="-L$GCC_CROSS -L$GCC_CROSS/$TRIPLE/$VERSION -L$CROSS_ROOT/lib"
+export CARGO_TARGET_AARCH64_UNKNOWN_LINUX_GNU_LINKER="aarch64-linux-gnu-gcc-${VERSION}"
+export CC_aarch64_unknown_linux_gnu="aarch64-linux-gnu-gcc-${VERSION}"
+alias qemu-aarch64='qemu-system-aarch64 -L /usr/aarch64-linux-gnu/'
+
 export PS1="\u@\h:\[\033[32m\]\W\[\033[33m\]\$(parse_git_branch)\[\033[00m\]$ "
 
 

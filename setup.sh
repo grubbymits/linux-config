@@ -1,7 +1,14 @@
 #!/bin/sh
 
+# TODO
 # Use lsb-release to determine whether we're on ubuntu or debian
 #sudo apt-get update && sudo apt-get upgrade && sudo apt-get install lsb-release
+
+# TODO
+# Make this interactive and do separate installs for work/play
+
+# TODO
+# Check whether we're building on x86_64 or aarch64
 
 sudo apt-get update && sudo apt-get upgrade && \
 sudo apt-get install \
@@ -17,6 +24,10 @@ sudo apt-get install \
   clang \
   lld \
   lldb \
+  gcc-aarch64-linux-gnu \
+  g++-aarch64-linux-gnu \
+  qemu-system-arm \
+  qemu-efi-aarch64 \
   curl \
   snapd
 
