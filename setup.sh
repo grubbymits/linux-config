@@ -59,6 +59,8 @@ sudo apt install -y nodejs
 # Rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 rustup target add wasm32-wasi
+rustup target add aarch64-unknown-linux-gnu
+cp cargo-config.toml ~/.cargo/config.toml
 
 git config --global user.email "samuel@grubbymits.dev"
 git config --global user.name "Samuel Parker-Haynes"
