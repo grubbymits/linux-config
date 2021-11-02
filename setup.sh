@@ -64,6 +64,7 @@ cp cargo-config.toml ~/.cargo/config.toml
 
 git config --global user.email "samuel@grubbymits.dev"
 git config --global user.name "Samuel Parker-Haynes"
+git config --global core.editor "vim"
 
 # Setup vim with solarized colours
 mkdir -p ~/.vim/colors
