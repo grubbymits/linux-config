@@ -31,6 +31,8 @@ sudo apt-get install \
   curl \
   openssh-server \
   mosh \
+  libsecret-1-0 \
+  libsecret-1-dev \
   snapd
 
 # spotify
@@ -65,6 +67,12 @@ cp cargo-config.toml ~/.cargo/config.toml
 git config --global user.email "samuel@grubbymits.dev"
 git config --global user.name "Samuel Parker-Haynes"
 git config --global core.editor "vim"
+
+# Setup git credential storing.
+cd /usr/share/doc/git/contrib/credential/libsecret
+sudo make
+git config --global credential.helper /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
+cd -
 
 # Setup vim with solarized colours
 mkdir -p ~/.vim/colors
