@@ -33,6 +33,8 @@ sudo apt-get install \
   mosh \
   libsecret-1-0 \
   libsecret-1-dev \
+  libncurses5 \
+  libncurses5-dev \
   snapd
 
 # spotify
