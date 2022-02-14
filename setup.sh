@@ -57,11 +57,12 @@ sudo apt install regolith-look-solarized-dark
 # regolith-look refresh
 
 # Node
-sudo curl -sL https://deb.nodesource.com/setup_14.x | sudo bash -
+sudo curl -sL https://deb.nodesource.com/setup_16.x | sudo bash -
 sudo apt install -y nodejs
 
 # Rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+source ~/.cargo/env
 rustup target add wasm32-wasi
 rustup target add aarch64-unknown-linux-gnu
 cp cargo-config.toml ~/.cargo/config.toml
