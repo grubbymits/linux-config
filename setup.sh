@@ -24,10 +24,6 @@ sudo apt-get install \
   curl \
   openssh-server \
   mosh \
-  libsecret-1-0 \
-  libsecret-1-dev \
-  libncurses5 \
-  libncurses5-dev \
   snapd
 
 # Stable LLVM
@@ -97,10 +93,10 @@ fi
 git config --global core.editor "vim"
 
 # Setup git credential storing.
-cd /usr/share/doc/git/contrib/credential/libsecret
-sudo make
-git config --global credential.helper /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
-cd -
+sudo apt install gpg pass
+gpg --gen-key
+git config --global credential.credentialStore gpg
+echo "Don't forget to setup pass afterwards: pass init <gpg-id>"
 
 # Setup vim with solarized colours
 mkdir -p ~/.vim/colors
