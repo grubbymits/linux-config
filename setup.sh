@@ -23,8 +23,7 @@ sudo apt-get install \
   ccache \
   curl \
   openssh-server \
-  mosh \
-  snapd
+  mosh
 
 # Stable LLVM
 sudo bash -c "$(wget -O - https://apt.llvm.org/llvm.sh)"
@@ -53,7 +52,7 @@ then
 fi
 
 # Node
-sudo curl -sL https://deb.nodesource.com/setup_16.x | sudo bash -
+curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
 sudo apt install -y nodejs
 
 # Rust
