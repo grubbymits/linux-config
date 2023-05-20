@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # TODO
 # Use lsb-release to determine whether we're on ubuntu or debian
@@ -57,7 +57,7 @@ sudo apt install -y nodejs
 
 # Rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-source ~/.cargo/env
+source $HOME/.cargo/env
 rustup target add wasm32-wasi
 cp cargo-config.toml ~/.cargo/config.toml
 
