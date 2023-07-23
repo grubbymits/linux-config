@@ -13,6 +13,10 @@
 sudo apt-get update && sudo apt-get upgrade && \
 sudo apt-get install \
   apt-utils \
+  lsb-release \
+  wget \
+  software-properties-common \
+  gnupg \
   vim \
   htop \
   tmux \
